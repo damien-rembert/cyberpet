@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+    align-items: center;
+
+}
+
+body {
+    background-image: linear-gradient(rgba(0, 68, 255, 0.466), rgba(88, 78, 16, 0.932));
+    /* background-image: radial-gradient(rgba(0, 68, 255, 0.466), rgba(145, 255, 0, 0.664)); */
+                      /*, url("../../media/examples/lizard.png"); */
+    font-family: 'Poppins', sans-serif;
+
+            
+}
+
+#container {
+    height: 100vh;
+
+}
+
+#bottom {
+    height: ;
+}
+
+
+    /* display a popup screen explaining thing?
+    screen split in three horizontaly
+    CSS: 2 top bits = background (2/3) and floor (1/6)
+    1 bottom bit =  1/6 console, indicating status with text vanishing at the bottom
+    centered portrait div = picture of the beast + stats */
+

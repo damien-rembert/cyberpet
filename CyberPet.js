@@ -8,6 +8,16 @@
 // – if you don’t play, it gets bored, if you do, it’s happy,
 // but gets thirsty, that kind of thing.
 
+
+// TODO:
+// day counter to be displayed 
+// form ask for name
+// cross out name if dead
+// display stats
+// put animals in an array so you can have more than one?
+// animation
+
+
 function normalise(value) {
     if (value > 100) {
         value = 100;
@@ -77,6 +87,7 @@ class CyberPet {
 
     play() {
         this._hunger += 5;
+        this._thirst += 5;
         if (this.boredom < 20) {
             this._boredom = 0;
 
