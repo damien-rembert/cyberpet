@@ -15,7 +15,27 @@
 // cross out name if dead
 // display stats
 // put animals in an array so you can have more than one?
+        // add animal names to an input/form/selector to switch from one to the other.
+        // OR right and left arrow to go to the next animal
 // animation
+
+let day = 0;
+let pets = [];
+
+function timer() {
+    setTimeout(() => {addDay()}, 2500);
+    // console.log("timer done running" );
+}
+
+function addDay() {
+    day++;
+    console.log("day incremented: " + day);
+    for (let i = 0; i < pets.length; i++) {
+        pets[i].incrementAge();
+        // console.log(pets[i]);
+    }
+    timer()
+}
 
 
 function normalise(value) {
@@ -39,6 +59,8 @@ class CyberPet {
         this._HP = 100;
         this._bodyType = 50;
         this._isDead = false;
+        pets.push(this);
+
     }
 
     get isDead() {
@@ -108,11 +130,11 @@ class CyberPet {
             if (this._isDead) {
                 break;
             }
-            this.incrementDay();
+            this.incrementAge();
         }
     }
 
-    incrementDay() {
+    incrementAge() {
         this._ageInDays++;
         this._hunger += 5;
         this._thirst += 5;
@@ -234,20 +256,25 @@ class Cat extends CyberPet {
     }
 }
 
-let jon = new Dog("Jon");
-jon.incrementDay();
-jon.eat();
-jon.timePassing(20);
-console.log(jon.HP);
+// let jon = new Dog("Jon");
+// jon.incrementAge();
+// jon.eat();
+// jon.timePassing(20);
+// console.log(jon.HP);
 
 
-let rosa = new Bunny("Rosa");
-rosa.incrementDay();
-rosa.hop();
-rosa.timePassing(20);
-console.log(jon.HP);
+// let rosa = new Bunny("Rosa");
+// rosa.incrementAge();
+// rosa.hop();
+// rosa.timePassing(20);
 
-let donald = new Cat("Don");
-donald.incrementDay();
-donald.roam();
-donald.timePassing(20);
+// let donald = new Cat("Don");
+// donald.incrementAge();
+// donald.roam();
+// donald.timePassing(20);
+
+
+// let jon = new Dog("Jon");
+// let rosa = new Bunny("Rosa");
+// let donald = new Cat("Don");
+timer();
